@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bookshelf Apps</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+	<h1>Bookshelf Apps</h1>
+</header>
+<div class="wrapper">
+	<div class="container shadow" id="add-book">
+		<h2 class="container-header text-center">Masukkan Buku Baru</h2>
+		<form class="form" action="#" id="form">
+			<div class="form-group form-title">
+			<label for="title">Judul Buku</label>
+            <input type="text" id="title" name="title" placeholder="Judul Buku" required>
+			</div>
+			<div class="form-group form-title">
+			<label for="penulis">Penulis</label>
+            <input type="text" id="penulis" name="penulis" placeholder="Penulis" required>
+			</div>
+            <div class="form-group form-title">
+			<label for="number">Tahun Terbit</label>
+            <input type="number" id="number" name="number" placeholder="Tahun Terbit" min="1900" max="2099">
+            <input type="submit" value="Submit" name="Submit" class="btn-submit" id="submit">
+			</div>
+		</div>
+		</form>
+			<div class="container">
+			<h2 class="container-header" style="text-align: center;">Cari Judul Buku</h2>
+			<form class="search" action="#" id="search">
+			<div class="form-group form-title">
+            <input type="text" id="cari" name="cari" placeholder="Cari Judul Buku">
+            <input type="submit" value="Search" name="subcari" class="btn-submit" id="btnsearch">
+			</div>
+			</div>
+
+		</form>
+
+			<div class="container">
+			<h2 class="container-header">Belum selesai dibaca</h2>
+			<div class="list-item" id="books">
+			</div>
+		</div>
+		<div class="container">
+			<h2 class="contaniner-header">Selesai dibaca</h2>
+			<div class="list-item" id="complete-books">
+			</div>
+	</div>
+</div>
+
+<div id="deleteDialog" class="dialog-container" style="display:none;">
+
+  <div class="dialog-content">
+    <div class="dialog-header">
+      <span class="close-button">&times;</span>
+      <h2>Konfirmasi Hapus</h2>
+    </div>
+    <div class="dialog-body">
+      <p>Apakah Anda yakin ingin menghapus <strong>Buku</strong> ini?</p>
+    </div>
+    <div class="dialog-footer">
+      <button id="confirmDelete">Hapus</button>
+      <button id="cancelDelete">Batal</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>
